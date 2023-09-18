@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.full_name }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    {% if user.image_url %}
+    <div class="custom-col">
+      <img src="{{ user.image_url }}" alt="{{ user.full_name }}" class="img-fluid">
+    </div>
+    {% endif %}
+
+    <div class="custom-col">
+      <h1>{{ user.full_name }}</h1>
+
+      <div class="button-container">
+        <a href="{{ url_for('edit_user', user_id=user.id) }}" class="custom-button edit-button">Edit</a>
+        <form method="POST" action="{{ url_for('delete_user', user_id=user.id) }}" class="custom-button delete-button">
+          <button type="submit">Delete</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+  
+  
+  
+  
+  
+  

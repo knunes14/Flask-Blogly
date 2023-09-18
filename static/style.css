@@ -1,0 +1,26 @@
+/* Custom column layout */
+.custom-col {
+    float: left;
+    width: 100%; /* By default, each column takes the full width */
+}
+  
+/* Styling for buttons */
+.custom-button {
+    display: inline-block;
+    margin-right: 10px; /* Spacing between buttons */
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+.edit-button {
+    background-color: #337ab7;
+    color: #fff;
+}
+  
+.delete-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+  
